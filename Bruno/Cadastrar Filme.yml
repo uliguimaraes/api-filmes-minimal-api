@@ -1,0 +1,25 @@
+info:
+  name: Cadastrar Filme
+  type: http
+  seq: 1
+
+http:
+  method: POST
+  url: http://localhost:5000/filmes
+  body:
+    type: json
+    data: |-
+      {
+        "titulo": "Interestelar",
+        "diretor": "Christopher Nolan",
+        "duracaoMinutos": 169,
+        "emCartaz": true,
+        "dataLancamento": "2014-11-07"
+      }
+  auth: inherit
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5
